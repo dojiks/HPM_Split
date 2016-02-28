@@ -1,0 +1,4 @@
+1. Promotion benefits for life needs halved, pormotion benefits for evday needs added
+2. Restrictive citizen/religous policy benefit accepted, hurt unnacepted promotion
+3. In colonial states accepted pops promote faster/ unnacepted demote. \
+4. Residency now encourages assimilation
