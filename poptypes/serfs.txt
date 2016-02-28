@@ -1,9 +1,8 @@
 sprite = 13
 color = { 63 80 62 }
 strata = poor
-unemployment = yes
-
 allowed_to_vote = no
+unemployment = yes
 
 rebel = {
 	cavalry = 0
@@ -49,32 +48,6 @@ luxury_needs = {
 	radio = 1.0
 	fuel = 0.1
 }
-
-country_migration_target = { factor = 0 }
-
-migration_target = { factor = 0 }
-	
-promote_to = {
-	farmers = {
-		factor = 1
-			
-			modifier = {
-				factor = 10
-				luxury_needs = 0.8
-			}
-			
-			modifier = {
-				factor = 10
-				NOT = { debt_law = serfdom }
-			}
-			
-			modifier = {
-				factor = -1000
-				debt_law = serfdom
-			}
-		}
-	}
-
 
 ideologies = {
 
@@ -157,7 +130,7 @@ issues = {
 	}
 	
 peonage = {
-	factor = 1
+	factor = 2
 	
 	modifier = {
 		factor = 0
