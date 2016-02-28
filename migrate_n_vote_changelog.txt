@@ -2,3 +2,7 @@
 2. Restrictive citizen/religous policy benefit accepted, hurt unnacepted promotion
 3. In colonial states accepted pops promote faster/ unnacepted demote. \
 4. Residency now encourages assimilation
+5. Not being accepted when the country has strict religous/citizenship policy causes demotion among unnacepted pops
+6. Pops that are not primary or accepted are unlike to leave culture core areas
+7. Accepted pops migrate internally much quicker in the face of unemployment. 
+8. Colonial migration is now attractive to unnacepted religions/populations
