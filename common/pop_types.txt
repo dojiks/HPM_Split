@@ -140,7 +140,7 @@ promotion_chance = {
 		country = { citizenship_policy = limited_citizenship }
 		state_scope = { is_colonial = yes }
 	}
-	#penalty for not being accepted culture/religion
+	
 	modifier = {
 		factor = -0.2
 		not = { religion = this }
@@ -176,25 +176,6 @@ promotion_chance = {
 
 demotion_chance = {
 	factor = 1
-	modifier = {
-		factor = -0.1
-		not = { religion = this }
-		strata = poor
-	}
-	modifier = {
-		factor = -0.1
-		state_scope = { is_colonial = yes }
-		strata = poor
-	}
-	modifier = {
-		factor = -0.05
-		state_scope = { is_slave = yes }
-	}
-	modifier = {
-		factor = -0.1
-		not = { culture = this }
-		strata = poor
-	}
 	group = {
 		modifier = {
 			factor = -0.02
@@ -252,29 +233,50 @@ demotion_chance = {
 			not = { life_needs = 0.7 }
 		}
 	}
+	
+
 		modifier = {
-			factor = -0.1
-			not = { consciousness = 4 }
-			strata = poor
+			factor = 0.1
+			not = { life_needs = 0.7 }
+			not = { is_culture_group = this }
+			country = { citizenship_policy = limited_citizenship }
 		}
+		modifier = {
+			factor = 0.1
+			not = { life_needs = 0.7 }
+			not = { culture = this }
+			country = { citizenship_policy = residency }
+		}
+		modifier = {
+			factor = 0.1
+			not = { life_needs = 0.7 }
+			not = { religion = this }
+			country = { religious_policy = moralism }
+		}
+	
+	
 
 
 	group = {
 		modifier = {
 			factor = 0.1
 			not = { luxury_needs = 1 }
+			strata = rich
 		}
 		modifier = {
 			factor = 0.1
 			not = { luxury_needs = 0.9 }
+			strata = rich
 		}
 	}
-		modifier = {
-			factor = 0.5
-			strata = middle
-			state_scope = { is_colonial = yes }
-			not = { culture = this }			
-		}
+		
+	modifier = {
+		factor = 0.5
+		strata = middle
+		state_scope = { is_colonial = yes }
+		not = { culture = this }			
+	}
+	
 	group = {
 		modifier = {
 			factor = -0.1
