@@ -83,34 +83,34 @@ promotion_chance = {
 
 
 	modifier = {
+		factor = -0.2
+		not = { religion = this }
+		country = { religious_policy = moralism }
+	}
+	modifier = {
 		factor = -0.1
 		not = { religion = this }
+		country = { religious_policy = pluralism }
 	}
 	modifier = {
 		factor = -0.1
 		state_scope = { is_colonial = yes }
-	}
-	modifier = {
-		factor = -0.1
 		not = { culture = this }
 	}
 	modifier = {
 		factor = -0.1
-		country = { 
-		OR = {
-			slavery = yes_slavery 
-			slavery = freedom_of_womb
-			debt_law = serfdom
-			}
-		}
+		not = { culture = this }
+		country = { citizenship_policy = residency }
 	}
 	modifier = {
-		factor = -0.05
-		state_scope = { is_slave = yes }
+		factor = -0.1
+		not = { is_culture_group = this }
+		country = { citizenship_policy = residency }
 	}
 	modifier = {
-		factor = -100
-		location = { NOT = { controlled_by = owner } }
+		factor = -0.1
+		not = { is_culture_group = this }
+		country = { citizenship_policy = limited_citizenship }
 	}
 	
 }

@@ -130,12 +130,12 @@ party_issues = {
 	}
 	citizenship_policy = {
 		residency = {
+			global_assimilation_rate = 0.1
 		}
 		limited_citizenship = {
 			global_assimilation_rate = 0.05
 		}
-		full_citizenship = {
-			global_assimilation_rate = 0.1
+		full_citizenship = {	
 		}
 	}
 	
@@ -235,7 +235,6 @@ political_reforms = {
 			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 0
-			
 			global_immigrant_attract = 0.02
 		}
 		wealth_voting = {
@@ -303,35 +302,7 @@ political_reforms = {
 			allow = { NOT = { vote_franschise = none_voting } }
 		}
 	}
-	public_meetings = {
-		no_meeting = {
-			suppression_points_modifier = 0.1
-		}
-		yes_meeting = {
-			issue_change_speed = 1
-			global_immigrant_attract = 0.01
-			suppression_points_modifier = -0.25
-		}
-
-	}
-	press_rights = {
-		next_step_only = yes
-		state_press = {
-			ruling_party_support = 0.25
-			literacy_con_impact = -0.25
-			suppression_points_modifier = 0.25
-		}
-		censored_press = {
-			issue_change_speed = 0.25
-			global_immigrant_attract = 0.01
-		}
-		free_press = {
-			literacy_con_impact = 0.25
-			issue_change_speed = 0.5
-			global_immigrant_attract = 0.02
-			suppression_points_modifier = -0.25
-		}
-	}
+	
 	trade_unions = {
 		next_step_only = yes
 		no_trade_unions = {
@@ -355,25 +326,20 @@ political_reforms = {
 		next_step_only = yes
 		underground_parties = {
 			ruling_party_support = 0.2
-			global_immigrant_attract = 0.01
 		}
 		harassment = {
 			ruling_party_support = 0.15
-			global_immigrant_attract = 0.02
 			allow = { NOT = { has_country_flag = theocratic_government } NOT = { vote_franschise = none_voting } }
 		}
 		gerrymandering = {
 			ruling_party_support = 0.10
-			global_immigrant_attract = 0.03
 			allow = { NOT = { vote_franschise = none_voting } }
 		}
 		non_secret_ballots = {
 			ruling_party_support = 0.05
-			global_immigrant_attract = 0.04
 			allow = { NOT = { vote_franschise = none_voting } }
 		}
 		secret_ballots = {
-			global_immigrant_attract = 0.05
 			allow = { NOT = { vote_franschise = none_voting } }
 		}
 	}
@@ -426,7 +392,7 @@ political_reforms = {
 		next_step_only = yes
 		primary_culture_only = {
 			rules = { primary_culture_voting = yes }
-			non_accepted_pop_consciousness_modifier = 0.01
+			non_accepted_pop_consciousness_modifier = 0.02
 			allow = {
 				citizenship_policy = residency 
 				NOT = { has_country_flag = theocratic_government }
@@ -434,12 +400,10 @@ political_reforms = {
 			}
 		culture_voting_only = {
 			rules = { culture_voting = yes }
-			global_assimilation_rate = 0.05
+			non_accepted_pop_consciousness_modifier = 0.02
 			}
 		all_voting_pops = {
 			rules = { all_voting = yes }
-			global_assimilation_rate = 0.15
-			global_immigrant_attract = 0.04
 		}
 	}
 	
