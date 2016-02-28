@@ -108,7 +108,6 @@ promotion_chance = {
 		factor = 0.05
 		life_needs = 0.9
 		culture = this
-		culture = this
 		country = { citizenship_policy = residency }
 	}
 	modifier = {
@@ -128,7 +127,6 @@ promotion_chance = {
 	modifier = {
 		factor = 0.05
 		life_needs = 0.9
-		culture = this
 		culture = this
 		country = { citizenship_policy = residency }
 		state_scope = { is_colonial = yes }

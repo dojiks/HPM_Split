@@ -2272,71 +2272,116 @@ ideologies = {
 }
 
 issues = {
-	low_tax = {
+	protectionism = {
 		factor = 0.5
 		modifier = {
-			factor = 1.05
-			NOT = { life_needs = 1.0 }
-			country = { poor_tax = 0.8 }
+			factor = 1.1
+			NOT = {
+				life_needs = 1.0
+			}
+			country = { trade_policy = free_trade }
 		}
 		modifier = {
 			factor = 1.05
-			NOT = { life_needs = 1.0 }
-			country = { poor_tax = 0.5 }
+			everyday_needs = 0.25
+			country = { trade_policy = protectionism }
 		}
 		modifier = {
 			factor = 1.05
-			NOT = { everyday_needs = 0.2}
-			country = { poor_tax = 0.8 }
+			everyday_needs = 0.5
+			country = { trade_policy = protectionism }
 		}
 		modifier = {
 			factor = 1.05
-			NOT = { everyday_needs = 0.2}
-			country = { poor_tax = 0.5 }
+			everyday_needs = 0.75
+			country = { trade_policy = protectionism }
 		}
 		modifier = {
-			factor = 0.5
-			country = {
+			factor = 1.05
+			everyday_needs = 1
+			country = { trade_policy = protectionism }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { everyday_needs = 0.05 }
+			country = { trade_policy = protectionism }
+		}		
+		modifier = {
+			factor = 0.95
+			NOT = { life_needs = 0.95 }
+			country = { trade_policy = protectionism }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { life_needs = 0.75 }
+			country = { trade_policy = protectionism }
+		}
+		modifier = {
+			factor = 0.95
+			NOT = { life_needs = 0.55}
+			country = { trade_policy = protectionism }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { life_needs = 0.55}
+			country = { 
+				trade_policy = protectionism
 				OR = {
-					has_recently_lost_war = yes
-					war = yes
+					has_country_modifier = in_bankruptcy
+					has_country_modifier = generalised_debt_default	
 				}
-			}	
-		}	
+			}
+		}
 	}
-	med_tax = {
+	free_trade = {
 		factor = 0.5
 		modifier = {
-			factor = 1.1
-			NOT = { life_needs = 1.0 }
-			country = { poor_tax = 0.8 }
+			factor = 0
+			NOT = {
+				life_needs = 1.0
+			}
+			country = { trade_policy = protectionism }
 		}
 		modifier = {
-			factor = 1.1
-			NOT = { everyday_needs = 0.2}
-			country = { poor_tax = 0.8 }
+			factor = 1.05
+			everyday_needs = 1.0
+			country = { trade_policy = free_trade }
 		}
 		modifier = {
-			factor = 0.7
-			country = {
-				OR = {
-					has_recently_lost_war = yes
-					war = yes
-				}
-			}	
-		}	
-	}
-	high_tax = {
-		factor = 0.5
+			factor = 1.05
+			everyday_needs = 0.25
+			country = { trade_policy = free_trade }
+		}
 		modifier = {
-			factor = 1.1
-			country = {
-				OR = {
-					has_recently_lost_war = yes
-					war = yes
-				}
-			}	
-		}	
+			factor = 1.05
+			everyday_needs = 0.5
+			country = { trade_policy = free_trade }
+		}
+		modifier = {
+			factor = 1.05
+			everyday_needs = 0.75
+			country = { trade_policy = free_trade }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { everyday_needs = 0.05 }
+			country = { trade_policy = protectionism }
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { life_needs = 0.95 }
+			country = { trade_policy = protectionism }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { life_needs = 0.75 }
+			country = { trade_policy = protectionism }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { life_needs = 0.55}
+			country = { trade_policy = protectionism }
+		}
 	}
 	laissez_faire = {
 		factor = 1
@@ -2352,14 +2397,72 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
+			everyday_needs = 0.5
+			country = { economic_policy = laissez_faire }
+		}
+		modifier = {
+			factor = 1.1
 			everyday_needs = 0.75
 			country = { economic_policy = laissez_faire }
 		}
 		modifier = {
+			factor = 1.1
+			everyday_needs = 1.0
+			country = { economic_policy = laissez_faire }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { everyday_needs = 0.05 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { everyday_needs = 0.05 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.75 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { everyday_needs = 0.05 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.60 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { life_needs = 0.75 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { life_needs = 0.75 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.75 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { life_needs = 0.75 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.60 }
+		}
+		modifier = {
 			factor = 0.84
 			country = { economic_policy = laissez_faire }
+			unemployment = 0.08
 			state_scope = { 
-				unemployment = 0.08
 				has_factories = yes
 			}
 			OR = {
@@ -2370,8 +2473,9 @@ issues = {
 		modifier = {
 			factor = 0.84
 			country = { economic_policy = laissez_faire }
+			unemployment = 0.15
 			state_scope = { 
-				unemployment = 0.15
+
 				has_factories = yes
 			}
 			OR = {
@@ -2382,8 +2486,8 @@ issues = {
 		modifier = {
 			factor = 0.84
 			country = { economic_policy = laissez_faire }
+			unemployment = 0.25
 			state_scope = { 
-				unemployment = 0.25
 				has_factories = yes
 			}
 			OR = {
@@ -2391,6 +2495,20 @@ issues = {
 				pop_majority_ideology = socialist
 			}
 		}
+		modifier = {
+			factor = 0.84
+			country = { 
+				economic_policy = laissez_faire
+			}
+			location = { 
+				can_build_factory = yes
+				state_scope = { 
+					has_factories = no
+				}
+			}
+			consciousness = 4
+		}	
+		
 	} 
 	interventionism = {
 		factor = 1
@@ -2398,6 +2516,7 @@ issues = {
 			factor = 0
 			NOT = {
 				life_needs = 1.0
+				poor_tax = 0.5
 			}
 			country = {
 				economic_policy = interventionism
@@ -2415,114 +2534,86 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
+			everyday_needs = 0.5
+			country = { economic_policy = interventionism }
+		}
+		modifier = {
+			factor = 1.1
 			everyday_needs = 0.75
 			country = { economic_policy = interventionism }
 		}
-		#if a country can build a railorad in a province but they haven't pops want intervention
 		modifier = {
-			factor = 1.2
-			country = { economic_policy = laissez_faire }
-			OR = {
-				AND = {
-					location = {
-						OR = {
-							terrain = plains
-							terrain = steppe
-							terrain = savanna
-							terrain = forest
-							terrain = farmlands
-							terrain = small_island
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { experimental_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = dryhills
-							terrain = hills
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { early_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = marsh
-							terrain = semidesert
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { iron_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = coastal_desert
-							terrain = montane_forest
-							terrain = mountain
-							terrain = jungle
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { steel_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = arctic
-							terrain = boreal
-							terrain = montane_tundra
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { integral_rail_system = 1 }
-				}
+			factor = 0.9
+			NOT = { everyday_needs = 0.1 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
 			}
-			NOT = { 
-				OR = {
-					pop_majority_ideology = socialist
-					pop_majority_ideology = communist
-					pop_majority_ideology = fascist
-				}
-			}
+			country = { poor_tax = 0.95 }
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.9
+			NOT = { everyday_needs = 0.1 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.75 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { everyday_needs = 0.05 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.60 }
+		}
+		modifier = {
+			factor = 1.1
 			country = { economic_policy = laissez_faire }
+			unemployment = 0.08
 			state_scope = { 
-				unemployment = 0.08
 				has_factories = yes
 			}
-			consciousness = 5
+			OR = {
+				consciousness = 5
+			}
 			NOT = { 
 				OR = {
 					pop_majority_ideology = socialist
 					pop_majority_ideology = communist
-					pop_majority_ideology = fascist
 				}
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.1
+			country = { economic_policy = laissez_faire }
+			unemployment = 0.15
+			state_scope = { 
+				has_factories = yes
+			}
+			OR = {
+				consciousness = 5
+			}
+			NOT = { 
+				OR = {
+					pop_majority_ideology = socialist
+					pop_majority_ideology = communist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
 			country = { economic_policy = laissez_faire }
 			state_scope = { 
 				unemployment = 0.25
 				has_factories = yes
 			}
-			consciousness = 5
-			NOT = { 
-				OR = {
-					pop_majority_ideology = socialist
-					pop_majority_ideology = communist
-					pop_majority_ideology = fascist
-				}
+			OR = {
+				consciousness = 5
 			}
+			NOT = { pop_majority_ideology = socialist }
 		}
 		modifier = {
-			factor = 0.7
+			factor = 0.84
 			country = { 
 				OR = {
 					economic_policy = interventionism
@@ -2547,6 +2638,7 @@ issues = {
 			}
 			country = {
 				economic_policy = state_capitalism
+				poor_tax = 0.5
 			}
 		}
 		modifier = {
@@ -2561,120 +2653,79 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
+			everyday_needs = 0.5
+			country = { economic_policy = state_capitalism }
+		}
+		modifier = {
+			factor = 1.1
 			everyday_needs = 0.75
 			country = { economic_policy = state_capitalism }
 		}
-		#if a country can build a railorad in a province but they haven't pops want intervention
 		modifier = {
-			factor = 1.2
+			factor = 0.9
+			NOT = { everyday_needs = 0.1 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.95 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { everyday_needs = 0.1 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.75 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { everyday_needs = 0.05 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.60 }
+		}
+		modifier = {
+			factor = 1.1
 			country = { economic_policy = laissez_faire }
-			OR = {
-				AND = {
-					location = {
-						OR = {
-							terrain = plains
-							terrain = steppe
-							terrain = savanna
-							terrain = forest
-							terrain = farmlands
-							terrain = small_island
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { experimental_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = dryhills
-							terrain = hills
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { early_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = marsh
-							terrain = semidesert
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { iron_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = coastal_desert
-							terrain = montane_forest
-							terrain = mountain
-							terrain = jungle
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { steel_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = arctic
-							terrain = boreal
-							terrain = montane_tundra
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { integral_rail_system = 1 }
-				}
-			}
-			OR = {
-				pop_majority_culture = reactionary
-				pop_majority_ideology = fascist
-			}
-			NOT = { 
-				OR = {
-					pop_majority_ideology = socialist
-					pop_majority_ideology = communist
-				}
-			}
-		}
-		modifier = {
-			factor = 1.05
-			OR = {
-				country = { economic_policy = laissez_faire }
-				country = { economic_policy = interventionism }
-			}
+			unemployment = 0.08	
 			state_scope = { 
-				unemployment = 0.2
 				has_factories = yes
 			}
-			NOT = { 
-				OR = {
-					pop_majority_ideology = socialist
-					pop_majority_ideology = communist
-				}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
 			}
+			NOT = { pop_majority_ideology = communist }
+		}
+		modifier = {
+			factor = 1.1
+			country = { economic_policy = laissez_faire }
+			unemployment = 0.15
+			state_scope = { 
+				has_factories = yes
+			}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
+			}
+			NOT = { pop_majority_ideology = communist }
+		}
+		modifier = {
+			factor = 1.1
+			country = { economic_policy = laissez_faire }
+			unemployment = 0.25
+			state_scope = { 
+				has_factories = yes
+			}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
+			}
+			NOT = { pop_majority_ideology = communist }
 		}
 		modifier = {
 			factor = 1.2
-			OR = {
-				country = { economic_policy = laissez_faire }
-				country = { economic_policy = interventionism }
-			}
-			state_scope = { 
-				unemployment = 0.25
-				has_factories = yes
-			}
-			consciousness = 5
-			NOT = { 
-				OR = {
-					pop_majority_ideology = socialist
-					pop_majority_ideology = communist
-				}
-			}
-		}
-		modifier = {
-			factor = 1.3
 			country = { 
 				OR = {
 					economic_policy = interventionism
@@ -2683,17 +2734,34 @@ issues = {
 			}
 			location = { 
 				can_build_factory = yes
-				state_scope = {
+				state_scope = { 
 					has_factories = no
 				}
 			}
-			NOT = { 
-				OR = {
-					pop_majority_ideology = socialist
-					pop_majority_ideology = communist
-				}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
 			}
+			NOT = { pop_majority_ideology = communist }
 		}	
+		modifier = {
+			factor = 1.1
+			country = { 
+				is_secondary_power = yes
+				NOT = { industrial_score = 30 }
+			}
+			consciousness = 5
+			NOT = { pop_majority_ideology = liberal }
+		}
+		modifier = {
+			factor = 1.1
+			country = { 
+				is_greater_power = yes
+				NOT = { industrial_score = 60 }
+			}
+			consciousness = 5
+			NOT = { pop_majority_ideology = liberal }
+		}
 	} 
 	planned_economy = {
 		factor = 1
@@ -2718,120 +2786,103 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
+			everyday_needs = 0.5
+			country = { economic_policy = planned_economy }
+		}
+		modifier = {
+			factor = 1.1
 			everyday_needs = 0.75
 			country = { economic_policy = planned_economy }
 		}
-		#if a country can build a railorad in a province but they haven't pops want intervention
+		modifier = {
+			factor = 0.9
+			NOT = { everyday_needs = 0.1 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.95 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { everyday_needs = 0.1 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.75 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { everyday_needs = 0.05 }
+			NOT = {
+				country = { economic_policy = laissez_faire }
+			}
+			country = { poor_tax = 0.60 }
+		}
 		modifier = {
 			factor = 1.1
 			country = { economic_policy = laissez_faire }
-			OR = {
-				AND = {
-					location = {
-						OR = {
-							terrain = plains
-							terrain = steppe
-							terrain = savanna
-							terrain = forest
-							terrain = farmlands
-							terrain = small_island
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { experimental_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = dryhills
-							terrain = hills
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { early_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = marsh
-							terrain = semidesert
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { iron_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = coastal_desert
-							terrain = montane_forest
-							terrain = mountain
-							terrain = jungle
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { steel_railroad = 1 }
-				}
-				AND = {
-					location = {
-						OR = {
-							terrain = arctic
-							terrain = boreal
-							terrain = montane_tundra
-						}
-						NOT = { has_building = railroad }
-					}
-					country = { integral_rail_system = 1 }
-				}
+			unemployment = 0.08
+			state_scope = { 
+				has_factories = yes
 			}
 			OR = {
+				consciousness = 5
 				pop_majority_ideology = socialist
 				pop_majority_ideology = communist
 			}
 			NOT = { 
 				OR = {
-					pop_majority_culture = reactionary
-					pop_majority_ideology = fascist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 		}
 		modifier = {
-			factor = 1.05
-			OR = {
-				country = { economic_policy = laissez_faire }
-				country = { economic_policy = interventionism }
-			}
+			factor = 1.1
+			country = { economic_policy = laissez_faire }
+			unemployment = 0.15
 			state_scope = { 
-				unemployment = 0.2
 				has_factories = yes
+			}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
+				pop_majority_ideology = communist
 			}
 			NOT = { 
 				OR = {
-					pop_majority_culture = reactionary
-					pop_majority_ideology = fascist
+					pop_majority_ideology = liberal
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = anarcho_liberal
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			country = { economic_policy = laissez_faire }
+			unemployment = 0.25
+			state_scope = { 
+				has_factories = yes
+			}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
+				pop_majority_ideology = communist
+			}
+			NOT = { 
+				OR = {
+					pop_majority_ideology = liberal
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = anarcho_liberal
 				}
 			}
 		}
 		modifier = {
 			factor = 1.2
-			OR = {
-				country = { economic_policy = laissez_faire }
-				country = { economic_policy = interventionism }
-			}
-			state_scope = { 
-				unemployment = 0.25
-				has_factories = yes
-			}
-			consciousness = 5
-			NOT = { 
-				OR = {
-					pop_majority_culture = reactionary
-					pop_majority_ideology = fascist
-				}
-			}
-		}
-		modifier = {
-			factor = 1.3
 			country = { 
 				OR = {
 					economic_policy = interventionism
@@ -2840,19 +2891,41 @@ issues = {
 			}
 			location = { 
 				can_build_factory = yes
-				state_scope = {
+				state_scope = { 
 					has_factories = no
 				}
 			}
-			NOT = { 
-				OR = {
-					pop_majority_culture = reactionary
-					pop_majority_ideology = fascist
-				}
+			OR = {
+				consciousness = 5
+				pop_majority_ideology = socialist
+				pop_majority_ideology = communist
 			}
 		}	
+		modifier = {
+			factor = 1.1
+			country = { 
+				is_secondary_power = yes
+				NOT = { industrial_score = 30 }
+			}
+			consciousness = 5
+			OR = {
+				pop_majority_ideology = communist
+				pop_majority_ideology = socialist
+			}
+		}
+		modifier = {
+			factor = 1.1
+			country = { 
+				is_greater_power = yes
+				NOT = { industrial_score = 60 }
+			}
+			consciousness = 5
+			OR = {
+				pop_majority_ideology = communist
+				pop_majority_ideology = socialist
+			}
+		}
 	} 
-
 	jingoism = {
 		factor = 1
 		modifier = {
@@ -2896,21 +2969,21 @@ issues = {
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war = yes
 			NOT = {
 				war_exhaustion = 10
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war = yes
 			NOT = {
 				war_exhaustion = 20
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war = yes
 			is_mobilised = no
 			NOT = {
@@ -2923,16 +2996,16 @@ issues = {
 			war_exhaustion = 30
 		}
 		modifier = {
-			factor = 0.7
+			factor = 0.95
 			war_exhaustion = 30
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.95
 			war = yes
 			war_exhaustion = 40
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.95
 			war = yes
 			war_exhaustion = 50
 		}	
@@ -2952,32 +3025,57 @@ issues = {
 			war_exhaustion = 50
 		}
 		modifier = {
-			factor = 1.03
+			factor = 1.1
 			war = yes
 			NOT = {
 				country = { badboy = 10 }
 			}
 		}
 		modifier = {
-			factor = 1.03
+			factor = 1.1
 			war = yes
 			NOT = {
 				country = { badboy = 20 }
 			}
+		}	
+		modifier = {
+			factor = 1.2
+			NOT = { war_exhaustion = 20 }
+			country = {
+				is_greater_power = yes
+			}
+		}	
+		modifier = {
+			factor = 1.1
+			NOT = { war_exhaustion = 20 }
+			country = {
+				is_secondary_power = yes
+			}
 		}		
-
+		modifier = {
+			factor = 1.1
+			war = no
+			any_neighbor_country = {
+				NOT = { military_score = THIS }
+				NOT = { is_sphere_leader_of = THIS }
+				NOT = { alliance_with = THIS }
+				is_independant = yes
+				part_of_sphere = no
+				
+			}
+		}
 	}
 	pro_military = {
 		factor = 1
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war = yes
 			NOT = {
 				war_exhaustion = 10
 			}
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war = yes
 			NOT = {
 				war_exhaustion = 20
@@ -3027,34 +3125,34 @@ issues = {
 			war_exhaustion = 20
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war_exhaustion = 30
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war_exhaustion = 40
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			war_exhaustion = 50
 		}
 		modifier = {
 			war = yes
-			factor = 1.05
+			factor = 1.1
 			war_exhaustion = 30
 		}
 		modifier = {
 			war = yes
-			factor = 1.05
+			factor = 1.1
 			war_exhaustion = 40
 		}
 		modifier = {
 			war = yes
-			factor = 1.05
+			factor = 1.1
 			war_exhaustion = 50
 		}
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			country = {
 				has_recently_lost_war = yes
 				war_policy = jingoism
@@ -3086,6 +3184,16 @@ issues = {
 		modifier = {
 			factor = 0.8
 			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 20
 		}
 		modifier = {
 			factor = 1.1
@@ -3330,7 +3438,7 @@ issues = {
 				has_recent_imigration = 90
 				has_national_minority = yes
 				unemployment_by_type = {
-					type = farmers
+					type = craftsmen
 					value = 0.05
 				}
 			}
@@ -3377,7 +3485,7 @@ issues = {
 				has_recent_imigration = 90
 				has_national_minority = yes
 				unemployment_by_type = {
-					type = farmers
+					type = craftsmen
 					value = 0.05
 				}
 			}
@@ -3489,7 +3597,6 @@ issues = {
 			consciousness = 9
 		}
 	}
-	
 
 ################################################################REFORMS#######################################################################	
 	

@@ -4051,8 +4051,7 @@ acquire_medium_state = {
 				is_capital = yes
 			}
 		}
-		NOT = any_owned_province = { total_pops = 120000 }
-		
+		NOT = { any_owned_province = { total_pops = 120000 } }		
 		OR = {
 			NOT = { any_owned_province = { is_capital = yes } }
 			AND = {
