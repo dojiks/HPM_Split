@@ -732,8 +732,7 @@ promote_to = {
 			}
 		}
 	}
-	soldiers =
-	{
+	soldiers = {
 		factor = 0.01
 		group = {
 			modifier = {
