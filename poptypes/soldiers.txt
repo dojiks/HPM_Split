@@ -39,13 +39,13 @@ life_needs = {
 }
 
 everyday_needs = {
-	tea = 4
-	coal = 1
-	liquor = 2
-	regular_clothes = 1
-	furniture = 1
-	ammunition = 0.5 #0
-	small_arms = 0.35 #0
+	tea = 4.2
+	coal = 1.18
+	liquor = 1.7
+	regular_clothes = 1.413
+	furniture = 1.15
+	ammunition = 0.54 #0
+	small_arms = 0.29 #0
 }
 
 luxury_needs = {	

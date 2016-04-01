@@ -14,12 +14,12 @@ life_needs = {
 }
 
 everyday_needs = {
-	tea = 4
-	coal = 1
-	liquor = 3
-	regular_clothes = 1.2
-	furniture = 1.1
-	explosives = 0.25
+	tea = 3.78
+	coal = 1.07
+	liquor = 1.33
+	regular_clothes = 1.95
+	furniture = 1.74
+	explosives = 0.42 #0
 }
 
 luxury_needs = {	
