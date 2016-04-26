@@ -3,7 +3,7 @@ primary_culture = yankee
 culture = dixie
 culture = texan
 religion = protestant
-government = democracy
+government = constitutional_monarchy
 plurality = 30.0
 nationalvalue = nv_liberty
 literacy = 0.65
@@ -11,7 +11,7 @@ non_state_culture_literacy = 0.1
 civilized = yes
 
 #GreaterPowers = prestige
-prestige = 20
+prestige = 50
 
 # Political reforms
 slavery = yes_slavery
@@ -43,9 +43,9 @@ ruling_party = USA_conservative
 last_election = 1832.5.5
 upper_house = {
 	fascist = 0
-	liberal = 37
-	conservative = 60
-	reactionary = 3
+	liberal = 48.5
+	conservative = 48.5
+	reactionary = 1
 	anarcho_liberal = 0
 	socialist = 0
 	communist = 0
